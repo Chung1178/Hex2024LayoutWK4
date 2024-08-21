@@ -1,0 +1,72 @@
+.store {
+    padding-top: 96px;
+    padding-bottom: 80px;
+    @include pad {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @include mobile {
+        padding-top: 40px;
+        padding-bottom: 64px;
+    }
+    h1 {
+        font-size: 48px;
+        font-weight: bold;
+        padding-left: 16px;
+        border-left:  8px solid #9F1213;
+    }
+    &-select {
+        label {
+            font-size: 24px;
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+        select {
+            padding: 6px 12px;
+            font-size: 18px;
+            border: 1px solid #CED4DA;
+            color: #495057;
+            width: 304px;
+            @include mobile {
+                flex-grow: 1;
+            }
+        }
+    }
+    &-list{
+        row-gap: 48px;
+        @include pad {
+            row-gap: 24px;
+        }
+    }
+    &-card {
+        &-title {
+            font-size: 24px;
+            padding: 8px 24px;
+            border: 1px solid #00000020;
+        }
+        &-content {
+            border: 1px solid #00000020;
+            padding: 16px 24px;
+            p {
+                font-size: 20px;
+            }
+            .material-icons-outlined{
+                font-size: 24px;
+                margin-right: 8px;
+            }
+        }
+        &-button {
+            display: block;
+            border: 1px solid #00000020;
+            background-color: #000000;
+            font-size: 19px;
+            color: #FFFFFF;
+            padding: 16px 0;
+            text-align: center;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}

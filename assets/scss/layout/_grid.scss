@@ -1,0 +1,50 @@
+  // WK4建立格線系統
+  $gap: 24px;
+  $columns-num: 12;
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
+    @include pad {
+      padding: 0 36px;
+    }
+    @include mobile {
+      padding: 0 14px;
+    }
+  }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -($gap/2);
+    margin-left: -($gap/2);
+}
+
+@for $i from 0 through $columns-num {
+  .col-#{$i} {
+    width: 100% * ($i / $columns-num);
+    padding-left: $gap/2;
+    padding-right: $gap/2;
+  }
+}
+
+@include pad {
+    @for $i from 0 through $columns-num {
+        .col-md-#{$i} {
+          width: 100% * ($i / $columns-num);
+          padding-left: $gap/2;
+          padding-right: $gap/2;
+        }
+      }
+}
+
+@include mobile {
+    @for $i from 0 through $columns-num {
+        .col-sm-#{$i} {
+          width: 100% * ($i / $columns-num);
+          padding-left: $gap/2;
+          padding-right: $gap/2;
+        }
+      }
+}

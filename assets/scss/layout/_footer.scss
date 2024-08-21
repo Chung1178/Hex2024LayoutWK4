@@ -1,4 +1,136 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
-}
+.footer {
+    padding-top: 48px;
+    padding-bottom: 32px;
+    @include pad {
+      padding-bottom: 40px;
+    }
+    @include mobile-l {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #FFFFFF;
+      @include mobile-l {
+        padding-bottom: 24px;
+      }
+    }
+    &-menu {
+      display: flex;
+      margin: 12px -12px 36px -12px;
+      @include pad {
+        margin-top: 8px;
+      }
+      @include mobile-l {
+        display: none;
+      }
+      &-item {
+        padding: 0 12px;
+        a {
+          color: #ffffff;
+        }
+        a:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    &-contact {
+      font-size: 36px;
+      color: #FFFFFF;
+      a {
+        font-size: 36px;
+        color: #FFFFFF;
+        @include mobile-l {
+          font-size: 16px;
+        }
+      }
+      &-phone {
+        display: flex;
+        align-items: center;
+        span {
+          font-size: 36px;
+          margin-right: 22px;
+          @include mobile-l {
+            font-size: 18px;
+            margin-right: 11px;
+          }
+        }
+      }
+      &-mail{
+        display: flex;
+        align-items: center;
+        span {
+          font-size:40px;
+          margin-right: 20px;
+          color: #FFFFFF;
+          @include mobile-l {
+            font-size: 20px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    &-social {
+      display: flex;
+      &-item {
+        padding: 0 16px;
+        &:last-child {
+          padding-right: 0;
+        }
+        @include pad {
+          padding: 0 8px;
+        }
+        @include mobile-l {
+          padding: 0 4px;
+        }
+        img {
+          width: 48px;
+          @include pad {
+            width: 40px;
+          }
+          @include mobile-l {
+            width: 24px;
+          }
+        }
+      }
+    }
+    &-end {
+      display: flex;
+      color: #ffffff;
+      padding-top: 32px;
+      justify-content: space-between;
+      @include mobile-l {
+        flex-direction: column;
+        padding-top: 16px;
+      }
+    }
+    &-policy {
+      display: flex;
+      @include mobile-l {
+        flex-direction: column;
+        margin: -4px 0;
+      }
+      &-item {
+        padding: 0 24px;
+        &:last-child {
+          padding-right: 0;
+        }
+        @include mobile-l {
+          padding: 4px 0;
+        }
+        a {
+          color: #ffffff;
+        }
+        a:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    &-copyright {
+      @include mobile-l {
+        margin-bottom: 8px;
+      }
+    }
+  }

@@ -1,0 +1,37 @@
+.d-flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.bg-primary {
+  background-color: $primary;
+}
+.bg-light {
+  background-color: $light;
+}
+
+$max: 10;
+
+@for $i from 0 through $max {
+  .mb-#{$i} {
+    margin-bottom: $i * 4px;
+  }
+  .mr-#{$i} {
+    margin-right: $i * 4px;
+  }
+}
+
+@include mobile {
+  @for $i from 0 through $max {
+    .mb-sm-#{$i} {
+      margin-bottom: $i * 4px;
+    }
+    .mr-sm-#{$i} {
+      margin-right: $i * 4px;
+    }
+  }
+}

@@ -1,3 +1,338 @@
-.index-title {
-  font-size: 100px;
+//banner 
+.bg-banner {  
+  background-image: url("../images/home-header.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include pad{
+    background-image: url("../images/home-header-sm.png");
+  }
+}
+.banner {
+  padding-top: 296px;
+  padding-bottom: 296px;  
+  text-align: right;
+  height: 787px;
+  @include mobile {
+    padding-top: 144px;
+    padding-bottom: 144px;
+    height: 396px;
+  }
+  p{
+    font-size: 36px;
+    color: $secondary;
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+  h1{
+    font-size: 64px;
+    font-weight: bold;
+    color: #650300;
+    margin-bottom: 4px;
+    @include mobile {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+  }
+  a {
+    display: inline-block;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #AA0601;
+    padding: 6px 12px;
+  }
+  a:hover {
+    background-color: #650300;
+  }
+}
+//introduction 
+.introduction{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+  h2{
+    font-size: 48px;
+    font-weight: bold;
+    color: #650300;
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+  &-list {
+    display: flex;
+    margin: 0 -12px;
+    @include pad {
+      flex-wrap: wrap;
+    }
+  }
+  &-card {
+    width: 25%;
+    padding: 0 12px;
+    margin-top: 30px;
+    @include pad {
+      width: 50%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+    img {
+      width: 84px;
+      margin-bottom: 8px;
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #650300;
+      margin-bottom: 8px;
+    }
+    p {
+      text-align:left;
+    }
+  }
+}
+// classic 
+.classic {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #650300;
+    margin-bottom: 48px;
+    @include mobile {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+  &-list {
+    display: flex;
+    margin: 0 -12px;
+    @include pad {
+      flex-direction: column;
+      align-items: center;
+      margin: -12px 0;
+    }
+    h3 {
+      font-size: 48px;
+      font-weight: 900;
+      font-style: italic;
+      color: #AA0601;
+    }
+  }
+  &-card {
+    width: 33.333%;
+    padding: 0 12px;
+    @include pad {
+      width: 50%;
+      padding: 12px 0;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+// co-brand 
+.bg-co-brand {
+  background-image: url("../images/index-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include pad {
+    background-image: url("../images/index-bg-md.png");
+  }
+  @include mobile {
+    background-image: url("../images/index-bg-sm.png");
+  }
+}
+.co-brand {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  h2{
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 48px;
+    @include mobile {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+  &-list {
+    display: flex;
+    @include pad {
+      flex-direction: column;
+      align-items: center;
+      margin: -12px 0;
+    }
+  }
+  &-card {
+    width: 50%;
+    @include pad {
+      width: 100%;
+      padding: 12px 0;
+    }
+    h3{
+      font-size: 48px;
+      font-weight: 900;
+      font-style: italic;
+      color: #AA0601;
+      background-color: #ffffff;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
+}
+// recommend
+.recommend {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #650300;
+    margin-bottom: 48px;
+    @include mobile {
+      font-size: 24px;
+      margin-bottom: 24px;
+    } 
+  }
+  &-list {
+    display: flex;
+    margin: 0 -12px;
+    @include pad {
+      flex-wrap: wrap;
+      margin: -12px -12px;
+    }
+    @include mobile {
+      margin: -8px 0;
+    }
+  }
+  &-column {
+    width: 25%;
+    padding: 0 12px;
+    @include pad {
+      width: 50%;
+      padding: 12px 12px;
+    }
+    @include mobile {
+      width: 100%;
+      padding: 8px 0;
+    }
+  }
+  &-card {
+    text-align: left;
+    box-shadow: 0px 2px 6px #00000029;
+    border: 1px solid #DEE2E6;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    h3{
+      font-weight: 500;
+      padding: 16px 16px 8px 16px;
+    }
+    p {
+      padding: 0 16px;
+      margin-bottom: 72px;
+    }
+    .date {
+      font-size: 14px;
+      color: #707070;
+      padding: 0 16px;
+      margin-bottom:16px;
+      margin-top: auto;
+    }
+  }
+}
+// contact 
+.contact {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #650300;
+    margin-bottom: 48px;
+    @include mobile {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+  &-form{
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    @include pad {
+      width: 83.333%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 24px;
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+    &-title {
+      display: block;
+      margin-bottom: 8px;
+    }
+    &-content {
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      border: 1px solid #000000;
+      margin-bottom: 16px;
+      &-textarea {
+        resize: none;
+        height: 136px;
+      }
+    }
+  }
+  &-button {
+    display: block; 
+    width: 66.6666%;
+    border: none;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin: 48px auto 0 auto;  
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #AA0601;
+    @include pad {
+      width: 60%;
+    }
+    @include mobile {
+      width: 100%;
+      margin-top: 24px;
+    }
+    &:hover {
+      background-color: #650300;
+      cursor: pointer;
+    }
+  }
 }
